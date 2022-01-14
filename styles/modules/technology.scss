@@ -1,0 +1,127 @@
+.technology {
+  max-width: 1670px;
+  margin: 200px auto 0;
+  padding: 70px;
+  border-radius: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color_primary;
+  background: #f8faff;
+  h3 {
+    font: normal normal bold 35px/60px "Montserrat";
+  }
+  p {
+    font: normal normal 500 25px/40px "Open Sans";
+    margin-bottom: 50px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  li div {
+    margin: 0 50px;
+  }
+  .aws {
+    width: 110px;
+  }
+  .google {
+    width: 290px;
+  }
+  .azure {
+    width: 190px;
+  }
+  .tanzo {
+    width: 340px;
+  }
+}
+
+@media (max-width: 1650px) {
+  .technology {
+    border-radius: 0;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1365px) {
+  .technology {
+    padding: 50px 30px;
+    box-sizing: border-box;
+    h3 {
+      font: normal normal bold 32px/50px "Montserrat";
+    }
+    p {
+      font: normal normal 500 22px/35px "Open Sans";
+      margin-bottom: 40px;
+    }
+    li div {
+      margin: 0 30px;
+    }
+    .aws {
+      width: 70px;
+    }
+    .google {
+      width: 250px;
+    }
+    .azure {
+      width: 150px;
+    }
+    .tanzo {
+      width: 300px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .technology {
+    margin-top: 50px;
+    li div {
+      margin: 0 15px;
+    }
+    .aws {
+      width: 70px;
+    }
+    .google {
+      width: 200px;
+    }
+    .azure {
+      width: 100px;
+    }
+    .tanzo {
+      width: 200px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .technology {
+    h3 {
+      text-align: center;
+      font: normal normal bold 30px/40px "Montserrat";
+      margin-bottom: 15px;
+    }
+    p {
+      font: normal normal 500 18px/30px "Open Sans";
+      text-align: center;
+    }
+    ul {
+      flex-direction: column;
+      li:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    li div {
+      margin: 0;
+    }
+    .aws {
+      width: 70px;
+    }
+    .google {
+      width: 200px;
+    }
+    .azure {
+      width: 100px;
+    }
+    .tanzo {
+      width: 200px;
+    }
+  }
+}

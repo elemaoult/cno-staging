@@ -1,0 +1,114 @@
+.link_block {
+  margin-top: 200px;
+  .container {
+    display: flex;
+    align-items: center;
+    .left_block {
+      margin-right: 30px;
+      width: 100%;
+      max-width: 560px;
+    }
+    .right_block {
+      h3 {
+        font: normal normal 800 35px/60px "Montserrat";
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
+      p {
+        font: normal normal normal 20px/40px "Open Sans";
+        max-width: 650px;
+        padding-bottom: 20px;
+      }
+      a {
+        font: normal normal bold 22px/50px "Open Sans";
+        color: $color_section_links;
+        padding-right: 35px;
+        background: url("../../img/arrow_right.svg") no-repeat right;
+        background-size: 22px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1650px) {
+  .link_block {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1365px) {
+  .link_block {
+    padding: 0 30px;
+    margin-top: 50px;
+    .container {
+      width: 100%;
+      margin: 0;
+      .right_block {
+        h3 {
+          font: normal normal 800 30px/50px "Montserrat";
+          margin-bottom: 10px;
+        }
+        p {
+          font: normal normal normal 18px/30px "Open Sans";
+          padding-bottom: 10px;
+        }
+        a {
+          font: normal normal bold 20px/50px "Open Sans";
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .link_block {
+    margin-top: 50px;
+    .container {
+      .left_block {
+        max-width: 350px;
+      }
+      .right_block {
+        h3 {
+          font: normal normal 800 30px/40px "Montserrat";
+        }
+        p {
+          font: normal normal normal 16px/25px "Open Sans";
+        }
+        a {
+          font: normal normal bold 18px/normal "Open Sans";
+        }
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .link_block {
+    margin-top: 50px;
+    padding: 0 15px;
+    .container {
+      flex-direction: column;
+      .left_block {
+        max-width: 100%;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .link_block {
+    margin-top: 30px;
+    padding: 0 15px;
+    .container {
+      .right_block {
+        h3 {
+          font: normal normal 800 26px/30px "Montserrat";
+        }
+        p {
+          font: normal normal normal 14px/25px "Open Sans";
+        }
+      }
+    }
+  }
+}

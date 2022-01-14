@@ -1,0 +1,231 @@
+.footer {
+  .green_started {
+    display: none;
+  }
+  margin-top: auto;
+  background: $color_footer;
+  padding: 113px 0 30px 0;
+  color: #fff;
+  .footer__description {
+    max-width: 370px;
+    font: normal normal normal 18px/35px "Open Sans";
+    margin: 30px 0;
+  }
+  .socials {
+    display: flex;
+    li:first-child {
+      margin-right: 30px;
+    }
+  }
+  .footer__outer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      font: normal 300 normal 14px/17px "Helvetica";
+      align-items: center;
+      li:not(:last-child) {
+        margin-right: 30px;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          background: white;
+          right: -15px;
+          height: 80%;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+        }
+      }
+    }
+  }
+  .footer__lists {
+    margin-top: 50px;
+    display: flex;
+    .footer__list:not(:last-child) {
+      margin-right: 145px;
+    }
+    .footer__list {
+      ul {
+        li {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .footer__title {
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+  }
+  li {
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__logo {
+
+    img {
+      width: 236px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    .footer__main {
+      margin-right: 195px;
+    }
+  }
+
+  
+}
+
+.powered {
+  width: 310px;
+  display: block;
+  
+}
+
+@media (max-width: 1365px) {
+  .footer {
+    padding: 70px 30px;
+    box-sizing: border-box;
+    .container {
+      width: 100%;
+      margin: 0;
+      .footer__inner {
+        justify-content: space-around;
+      }
+      .footer__outer {
+        margin-top: 70px;
+        flex-direction: column;
+        align-items: center;
+        ul {
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .footer {
+    .container {
+      .footer__inner {
+        justify-content: space-between;
+        .footer__main {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 30px;
+    .container {
+      .footer__inner {
+        flex-direction: column;
+        .footer__main {
+          a {
+            img {
+              max-width: 200px;
+            }
+          }
+          .footer__description {
+            font: normal normal normal 16px/30px Open Sans;
+          }
+        }
+        .footer__lists {
+          width: 100%;
+        }
+      }
+      .footer__outer {
+        .powered {
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .footer {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    .green_started {
+      display: block;
+      padding: 25px;
+      background: #199e58;
+      margin: 30px -15px;
+    }
+    .container {
+      .footer__inner {
+        .footer__main {
+          a {
+            .footer__logoImg {
+              max-width: 150px;
+            }
+          }
+          .footer__description {
+            font: normal normal normal 14px/25px Open Sans;
+          }
+        }
+        .footer__lists {
+          margin-top: 0;
+          display: flex;
+          flex-direction: column;
+          .footer__list:not(:last-child) {
+            margin-right: 0;
+          }
+          .footer__list {
+            display: contents;
+            .footer__title {
+              display: none;
+            }
+            li {
+              display: none;
+            }
+            li.doc, li.about, li.demo {
+              display: block;
+            }
+          }
+        }
+      }
+      .footer__outer {
+        margin-top: 30px;
+        ul {
+          font-size: 10px;
+          margin-bottom: 5px;
+          li {
+            margin: 0 10px 5px;
+            &:after {
+              height: 50%;
+              right: -10px;
+            }
+          }
+        }
+        .powered {
+          &__img {
+            width: 150px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

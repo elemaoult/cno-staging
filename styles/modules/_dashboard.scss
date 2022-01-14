@@ -1,0 +1,51 @@
+.dashboard {
+  p {
+    font: italic normal 500 35px/60px "Open Sans";
+    letter-spacing: 0px;
+    color: $color_primary;
+    max-width: 1040px;
+    margin-bottom: 100px;
+    span {
+      color: $color_secondary;
+    }
+  }
+}
+
+@media (max-width: 1365px) {
+  .dashboard {
+    .container {
+      margin: 0;
+      width: 100%;
+    }
+    padding: 0 30px;
+    box-sizing: border-box;
+    p {
+      font: italic normal 500 30px/45px "Open Sans";
+      margin-bottom: 60px;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .dashboard {
+    padding: 0 15px;
+    box-sizing: border-box;
+    p {
+      font: italic normal 500 25px/45px "Open Sans";
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .dashboard {
+    margin-top: 50px;
+    box-sizing: border-box;
+    p {
+      font: italic normal 500 20px/35px "Open Sans";
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+}

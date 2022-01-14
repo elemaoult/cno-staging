@@ -1,0 +1,36 @@
+@mixin desc {
+  @media (max-width: $break_desc) {
+    @content;
+  }  	
+}
+
+@mixin md {
+  @media (max-width: $break_md) {
+    @content;
+  }  	
+}
+
+@mixin sm {
+  @media (max-width: $break_sm) {
+    @content;
+  }  	
+}
+
+@mixin xs {
+  @media (max-width: $break_xs) {
+    @content;
+  }  	
+}
+
+@mixin xxs {
+  @media (max-width: $break_xxs) {
+    @content;
+  }  	
+}
+
+@mixin cont {
+  @media (max-width: $container-xl) {
+    @content;
+  }  	
+}
+    

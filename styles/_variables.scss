@@ -1,0 +1,28 @@
+// general
+$ff: 'Open Sans';
+
+$__IMG_PATH: '../../img/';
+$__FONTS_PATH: '../fonts/';
+
+
+// colors
+$color_primary: #517BBD;
+$color_secondary: #199E58;
+$color_default: #1C2B43;
+$color_footer: #1C2B43;
+$color_yellow: #F3B312;
+$color_red: #DB4538;
+$color_section_links: #70A6FE;
+
+//layout
+$container-xl: 1296px;
+$container: 92%;
+$offset_x: calc((100vw - #{$container}) / 2);
+
+
+//breakpoints
+$break_desc: '1440px';
+$break_md: '1223px';
+$break_sm: '992px';
+$break_xs: '768px';
+$break_xxs: '500px';
