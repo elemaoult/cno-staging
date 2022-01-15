@@ -1,0 +1,18 @@
+.docsWrap{
+  display: flex;
+  padding-bottom: 48px;
+}
+
+
+.documentation {
+  padding: 48px 46px 0 46px;
+  width: calc(100% - 21% - 13%);
+
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    margin-top: 100px;
+  }
+}

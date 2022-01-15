@@ -1,0 +1,65 @@
+.pagination {
+  display: flex;
+  padding-top: 62px;
+  margin-top: 62px;
+  border-top: 1px solid $color_grey;
+
+  &__btn {
+    background: $color_pagination;
+    display: inline-block;
+    padding: 8px 0;
+    color: #fff;
+    width: 41%;
+    border-radius: 5px;
+    transition: all .2s;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 21px;
+      background: url($__IMG_PATH + 'arrow.svg') no-repeat;
+      background-size: contain;
+    }
+
+    &--prev {
+      padding-left: 64px;
+      padding-right: 24px;
+      text-align: left;
+
+      &::before {
+        top: 50%;
+        left: 24px;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &--next {
+      padding-left: 24px;
+      padding-right: 64px;
+      text-align: right;
+      margin-left: auto;
+
+      &::before {
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+      }
+    }
+
+    p {
+      font: normal normal 600 20px/27px Open Sans;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px 0px #000;
+    }
+  }
+
+  &__title {
+    font: normal normal normal 20px/40px Roboto;
+    color: #ccc;
+  }
+}

@@ -1,5 +1,5 @@
-
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import burger from '../../img/burger.svg';
 import close from '../../img/close.svg';
@@ -26,20 +26,24 @@ export const Header = () => {
           </div> 
         </button>
         <div className="header__logo">
-          <a href="./"> 
-            <div className="header__logoImg">
-              <Image
-                src={menu}
-                width={130}
-                height={44}
-                className="header__opener--active"
-              />
-            </div>            
-          </a>
+          <Link href="/">
+            <a> 
+              <div className="header__logoImg">
+                <Image
+                  src={menu}
+                  width={130}
+                  height={44}
+                  className="header__opener--active"
+                />
+              </div>            
+            </a>
+          </Link>           
         </div>
         <div className="header__slogan">Release 0.1</div>
         <div className="header__buttons"> 
-          <a className="btn btn--primary" href="#">DOCUMENTATION</a>
+          <Link href="/documentation">
+            <a className="btn btn--primary">DOCUMENTATION</a>
+          </Link>          
           <a className="btn btn--secondary" href="#">START FOR FREE</a>
         </div>
       </div>

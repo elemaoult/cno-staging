@@ -9,11 +9,14 @@
 
 @import 'parts/header';
 @import 'parts/footer';
-
-@import 'modules/hero';
-@import 'modules/cloud';
-@import 'modules/dashboard';
-@import 'modules/link_block';
-@import 'modules/technology';
-@import 'modules/link_reverse';
-@import 'modules/storys';
+@import 'parts/hero';
+@import 'parts/cloud';
+@import 'parts/dashboard';
+@import 'parts/link_block';
+@import 'parts/technology';
+@import 'parts/link_reverse';
+@import 'parts/storys';
+@import 'parts/breadcrumbs';
+@import 'parts/sidebars';
+@import 'parts/documentation';
+@import 'parts/pagination';
