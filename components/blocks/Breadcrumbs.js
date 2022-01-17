@@ -1,6 +1,6 @@
 
 
-export const BreadCrumbs = ({data}) => {
+export const Breadcrumbs = ({data}) => {
 
   return (
     <section className="breadcrumbs">

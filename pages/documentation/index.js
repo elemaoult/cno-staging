@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import parser from 'html-react-parser';
 import { Layout } from '../../components/layout/Layout';
-// import { BreadCrumbs } from '../../components/blocks/BreadCrumbs';
+import { Breadcrumbs } from '../../components/blocks/Breadcrumbs';
 import { SidebarLeft } from '../../components/blocks/sidebars/Left';
 import { SidebarRight } from '../../components/blocks/sidebars/Right';
 import { DocsContent } from '../../components/blocks/DocsContent';
@@ -38,7 +38,7 @@ const Documentation = ({data, prevPost, nextPost}) => {
   return (
    <>
     <Layout seo={metas} extHeader={false}>
-      {/* <BreadCrumbs data={breadcrumbsData}/> */}
+      <Breadcrumbs data={breadcrumbsData}/>
       <div className="docsWrap">
         <SidebarLeft data={data} currentPost={id} active={sidebarActive}/>
         <div className="documentation">
