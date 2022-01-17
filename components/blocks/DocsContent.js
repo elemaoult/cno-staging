@@ -5,7 +5,7 @@ export const DocsContent = (props) => {
   const content = props.content || 'Empty content.';
 
   return (
-    <main className="">
+    <main className="content">
       <h1 id="page-title">{title}</h1>
       
       {content}

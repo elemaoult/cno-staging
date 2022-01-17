@@ -19,11 +19,13 @@ export const SidebarRight = ({content, title}) => {
   });
 
   const anchorHandler = (id) => {
-    const target = document.querySelectorAll(`#${id}`);
+    const target = document.getElementById(`${id}`);
 
-    if (target.length) {
+    console.log(target);
+
+    if (target) {
       window.scrollTo({
-          top: (target[0].getBoundingClientRect().top - (target[0].clientHeight / 2)) + scrollY - 200,
+          top: (target.getBoundingClientRect().top - (target.clientHeight / 2)) + scrollY - 200,
           behavior: "smooth"
       });
     }
@@ -31,21 +33,25 @@ export const SidebarRight = ({content, title}) => {
 
   useEffect(() => {  
     const scrollHandler = () => {
-      let newStep = 0;
+      try {
+        let newStep = 0;
 
-      ids.forEach((id, i) => {
-        const node = document.querySelector(`#${id}`);
+        ids.forEach((id, i) => {
+          const node = document.getElementById(`${id}`);
 
-        if (node) {
-          const screenOffset = (node.getBoundingClientRect().top);
+          if (node) {
+            const screenOffset = (node.getBoundingClientRect().top);
 
-          if (screenOffset < 250) {
-            newStep = i;
-          };
-        }        
-      });
+            if (screenOffset < 250) {
+              newStep = i;
+            };
+          }        
+        });
 
-      setStep(newStep); 
+        setStep(newStep); 
+      } catch(err) {
+        console.warn(err);
+      }
     }
 
     document.addEventListener('scroll', scrollHandler);
