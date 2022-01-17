@@ -1,5 +1,12 @@
 
 .content {
+  h1 {
+
+    @include xs {
+      font-size: 28px;
+    }
+  }
+  
   h2, h3, h4, h5, h6 {
     color: $color_primary;
     margin-bottom: 10px;
@@ -56,6 +63,12 @@
   img {
     width: 100%;
     height: 100%;
+    margin-bottom: 16px;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 16px;
   }
 }
 

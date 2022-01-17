@@ -54,6 +54,8 @@ const DocumentationPage = ({data, singlePost, prevPost, nextPost}) => {
   const metas = { title: meta_title || title, description: meta_description || title };
   const [sidebarActive, setSidebarActive] = useState(false);
 
+  console.log(data.posts);
+
   return (
     <>
      <Layout seo={metas} extHeader={false}>
