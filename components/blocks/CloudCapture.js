@@ -15,24 +15,28 @@ export const CloudCapture = () => {
           <Image
             src={top_cloud}
             layout="fill"
+            alt=""
           />
         </div>
         <div className="bottom_cloud">
           <Image
             src={bottom_cloud}
             layout="fill"
+            alt=""
           />
         </div>
         <div className="top_mobile_cloud">
           <Image
             layout="fill"
             src={top_mobile_cloud}
+            alt=""
           />
         </div>
         <div className="bottom_mobile_cloud">
           <Image
             layout="fill"
             src={bottom_mobile_cloud}
+            alt=""
           />
         </div>
         <div className="cloud_content" data-aos="fade-top">
@@ -42,6 +46,7 @@ export const CloudCapture = () => {
             <Image
               src={microphone}
               layout=""
+              alt=""
             />
           </div>
           <a className="btn btn--action" href="#">LET’S TAKE A CLOSER LOOK !</a>

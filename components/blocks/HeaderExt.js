@@ -19,6 +19,7 @@ export const HeaderExt = () => {
                 src={beopen}
                 width={310}
                 height={68}
+                alt=""
               />
             </a>
           </div>
@@ -28,6 +29,7 @@ export const HeaderExt = () => {
                 src={linux}
                 width={187}
                 height={75}
+                alt=""
               />
             </a>
           </div>

@@ -9,6 +9,7 @@ export const Improved = () => {
         <div className="left_block">
           <Image
             src={screens}
+            alt=""
           />
         </div>
         <div className="right_block">

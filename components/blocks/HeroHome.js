@@ -22,6 +22,7 @@ export const HeroHome = () => {
           src={mockup}
           layout="responsive"
           placeholder="blur"
+          alt=""
         />
       </div>      
     </section>

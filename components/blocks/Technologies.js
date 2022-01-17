@@ -16,6 +16,7 @@ export const Technologies = () => {
           <div className="aws">
             <Image
               src={Aws}
+              alt=""
             />
           </div>
         </li>
@@ -23,6 +24,7 @@ export const Technologies = () => {
           <div className="google">
             <Image
               src={Gcp}
+              alt=""
             />
           </div>
         </li>
@@ -30,6 +32,7 @@ export const Technologies = () => {
           <div className="azure">
             <Image
               src={Azure}
+              alt=""
             />
           </div>
         </li>
@@ -37,6 +40,7 @@ export const Technologies = () => {
           <div className="tanzo">
             <Image
               src={Tanzu}
+              alt=""
             />
           </div>
         </li>

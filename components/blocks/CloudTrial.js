@@ -13,24 +13,28 @@ export const CloudTrial = () => {
           <Image
             src={top_cloud}
             layout="fill"
+            alt=""
           />
         </div>
         <div className="bottom_cloud">
           <Image
             src={bottom_cloud}
             layout="fill"
+            alt=""
           />
         </div>
         <div className="top_mobile_cloud">
           <Image
             layout="fill"
             src={top_mobile_cloud}
+            alt=""
           />
         </div>
         <div className="bottom_mobile_cloud">
           <Image
             layout="fill"
             src={bottom_mobile_cloud}
+            alt=""
           />
         </div>
         

@@ -17,11 +17,13 @@ export const Header = () => {
           <div className="header__opener--default" onClick={() => setActive(true)}>
             <Image
               src={burger}
+              alt=""
             />
           </div>
           <div className="header__opener--active" onClick={() => setActive(false)}>
             <Image
               src={close}
+              alt=""
             />
           </div> 
         </button>
@@ -34,6 +36,7 @@ export const Header = () => {
                   width={130}
                   height={44}
                   className="header__opener--active"
+                  alt=""
                 />
               </div>            
             </a>

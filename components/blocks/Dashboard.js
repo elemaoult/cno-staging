@@ -14,6 +14,7 @@ export const Dashboard = () => {
         <div className="dashboard__img">
           <Image
             src={shema}
+            alt=""
           />
         </div>
       </div>

@@ -15,6 +15,7 @@ export const Footer = () => {
               <div className="footer__logoImg">
                 <Image
                   src={cno}
+                  alt=""
                 />
               </div>
             </a>
@@ -24,6 +25,7 @@ export const Footer = () => {
                 <a href="#">
                   <Image
                     src={linkedin}
+                    alt=""
                   />
                 </a>
               </li>
@@ -31,6 +33,7 @@ export const Footer = () => {
                 <a href="#">
                   <Image
                     src={slack}
+                    alt=""
                   />
                 </a>
               </li>
@@ -68,6 +71,7 @@ export const Footer = () => {
               <Image
                 src={beopeni}
                 layout="responsive"
+                alt=""
               />
             </div>            
           </a>

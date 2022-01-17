@@ -27,6 +27,7 @@ export const StoryCards = () => {
         <div className="red_right">
           <Image
             src={slack}
+            alt=""
           />
         </div>
       </div>

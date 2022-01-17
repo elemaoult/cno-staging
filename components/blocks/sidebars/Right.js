@@ -7,9 +7,6 @@ import mail from '../../../img/mail-round.svg';
 
 
 export const SidebarRight = ({content, title}) => {
-  
-  if (!content) return null;
-
   const [step, setStep] = useState(0);
   const anchors = [];
   const ids = ['page-title'];
@@ -82,15 +79,15 @@ export const SidebarRight = ({content, title}) => {
           <div className="sidebar__title">SUPPORT</div>
           <div className="supportLinks">
             <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={github} />
+              <Image width={30} height={30} src={github} alt="" />
               <p>Create doc. Issue</p>
             </a>
             <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={slack} />
+              <Image width={30} height={30} src={slack} alt="" />
               <p>Join us on Slack</p>
             </a>
             <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={mail} />
+              <Image width={30} height={30} src={mail} alt="" />
               <p>Ask for demo</p>
             </a>
           </div>
