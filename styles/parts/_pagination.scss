@@ -4,16 +4,19 @@
   margin-top: 62px;
   border-top: 1px solid $color_grey;
 
+  @include sm {
+    padding-top: 32px;
+    margin-top: 32px;
+  }
+
   &__btn {
-    background: $color_pagination;
-    display: inline-block;
-    padding: 8px 0;
-    color: #fff;
     width: 41%;
-    border-radius: 5px;
-    transition: all .2s;
     cursor: pointer;
     position: relative;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &::before {
       content: '';
@@ -22,6 +25,11 @@
       height: 21px;
       background: url($__IMG_PATH + 'arrow.svg') no-repeat;
       background-size: contain;
+
+      @include sm {
+        width: 8px;
+        height: 14px;
+      }
     }
 
     &--prev {
@@ -29,10 +37,18 @@
       padding-right: 24px;
       text-align: left;
 
+      @include sm {
+        padding-left: 40px;
+      }
+
       &::before {
         top: 50%;
         left: 24px;
         transform: translateY(-50%) rotate(180deg);
+
+        @include sm {
+          left: 16px;
+        }
       }
     }
 
@@ -42,15 +58,33 @@
       text-align: right;
       margin-left: auto;
 
+      @include sm {
+        padding-right: 40px;
+      }
+
       &::before {
         top: 50%;
         right: 24px;
         transform: translateY(-50%);
+
+        @include sm {
+          right: 16px;
+        }
       }
     }
 
     p {
       font: normal normal 600 20px/27px Open Sans;
+
+      @include md {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include sm {
+        font-size: 10px;
+        line-height: 16px;
+      }
     }
 
     &:hover {
@@ -61,5 +95,9 @@
   &__title {
     font: normal normal normal 20px/40px Roboto;
     color: #ccc;
+
+    @include md {
+      display: none;
+    }
   }
 }

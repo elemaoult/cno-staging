@@ -1,17 +1,16 @@
+import { useState } from 'react';
 import parser from 'html-react-parser';
 import { Layout } from '../../components/layout/Layout';
-import { Header } from '../../components/blocks/Header';
 import { BreadCrumbs } from '../../components/blocks/BreadCrumbs';
 import { SidebarLeft } from '../../components/blocks/sidebars/Left';
 import { SidebarRight } from '../../components/blocks/sidebars/Right';
 import { DocsContent } from '../../components/blocks/DocsContent';
 import { Pagination } from '../../components/blocks/Pagination';
+import { getAllPosts } from '../../api';
 
 export const getServerSideProps = async (context) => {
   try {
-      const response = await fetch('https://cno-documention.ghost.io/ghost/api/v4/content/posts/?key=72bf9fc7b0aabcceec343c7eaa&include=tags&order=published_at%20asc');
-      const data = await response.json();
-
+      const data = await getAllPosts();
       const prevPost = null;
       const nextPost = data.posts.length > 1 ? data.posts[1] : null;
 
@@ -34,19 +33,20 @@ const Documentation = ({data, prevPost, nextPost}) => {
     title
   ];
   const metas = { title: meta_title || title, description: meta_description || title };
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   return (
    <>
-    <Layout seo={metas}>
-      <Header/>
+    <Layout seo={metas} extHeader={false}>
       <BreadCrumbs data={breadcrumbsData}/>
       <div className="docsWrap">
-        <SidebarLeft data={data} currentPost={id}/>
+        <SidebarLeft data={data} currentPost={id} active={sidebarActive}/>
         <div className="documentation">
           <DocsContent {...docsData}/>
           <Pagination next={nextPost} prev={prevPost}/>
-         </div> 
-        <SidebarRight/>
+        </div>
+        <button className={`btn sidebarOpener${sidebarActive ? ' active' : ''}`} onClick={() => setSidebarActive(!sidebarActive)}></button>  
+        <SidebarRight content={content} title={title}/>
       </div>
     </Layout>
    </>

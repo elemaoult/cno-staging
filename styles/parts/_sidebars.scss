@@ -3,6 +3,10 @@
   &__content {
     position: sticky;
     top: 150px;
+
+    @include sm {
+      top: 89px;
+    }
   }
 
   &__part {
@@ -23,11 +27,7 @@
   &__list {
     padding-left: 22px;
     position: relative;
-    border-left: 1px solid $color_grey;
-
-    &::before {
-      content: '';
-    }
+    border-left: 1px solid #EBEBEB;
 
     li {
 
@@ -37,55 +37,195 @@
 
       a, button {
         font: normal normal normal 20px/26px Roboto;
-        color: #191F31;
-        line-height: 26px;
+        color: $color_default;
         transition: all .2s;
 
         &:hover {
           color: #5599F8;
         }
+
+        @include md {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
 
       &.active {
         a, button {
-          color: #5599F8;
+          color: $color_active;
           pointer-events: none;
         }
       }
     }
+
   }
 
   &--left {
-    padding: 48px 0 0 48px;
-    border-right: 1px solid $color_grey;
-    width: 21%;    
+    padding: 48px 24px 0 48px;
+    border-right: 1px solid $color_grey;   
+    width: 391px;
     background: #F8F9FC 0% 0% no-repeat padding-box;
+
+    @include desc {
+      width: 21%;
+    }
+
+    @include md {
+      padding: 24px 24px 0 0;
+      padding-left: $offset_x;
+    }
+
+    @include sm {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      bottom: 0;
+      z-index: 5;
+      padding-top: 89px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .4s;
+      width: 40%;
+      padding-left: 42px;
+      box-shadow: 5px 0px 20px #4c4c4c;
+    }
+
+    @include xxs {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    &.active {
+      @include sm {
+        opacity: 1;
+        pointer-events: auto;
+        left: 0;
+      }
+    }
+
+    .sidebar__content {
+
+      @include sm {
+        position: static;
+        max-height: 100%;
+        overflow: auto;
+        padding-bottom: 24px;
+      }
+    }
   }
 
   &--right {
     padding: 48px 48px 0 0;
     border: none;
-    width: 13%;    
+    //width: 15%;    
+    width: 282px;
     margin-left: auto;
 
+    @include md {
+      padding: 24px 0 0 24px;
+      padding-right: $offset_x;
+      width: 25%;
+    }
+
+    @include sm {
+      padding-left: 12px;
+    }
+
+    @include xs {
+      display: none;
+    }
+
+    .sidebar__part {
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
     .sidebar__title {
-      color: #000;
+      color: $color_default;
+
+      @include sm {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
 
     .sidebar__list {
+      border-left: 4px solid #EBEBEB;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 0;
+        width: 6px;
+        height: 42px;
+        background: $color_active;
+        border-radius: 50px;
+        transition: all .2s;
+        transform: translateY(calc(100% * var(--step)));
+
+        @include sm {
+          height: 34px;
+        }
+      }
 
       li {
 
         &:not(:last-child) {
-          margin-bottom: 28px;
+          margin-bottom: 0;
         }
 
         button {
-          font: normal normal 400 16px/25px Open Sans;
+          font: normal normal 400 16px/22px Open Sans;
           text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          padding: 10px 0;
+
+          @include sm {
+            font-size: 12px;
+            line-height: 18px;
+            padding: 8px 0;
+          }
+        }
+      }
+    }
+
+    .supportLinks {
+
+      @include sm {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px;
+      }
+
+      &__link {
+        width: 100%;
+        display: flex; 
+        align-items: center; 
+        padding: 15px 14px;
+
+        &:not(:last-child) {
+          margin-bottom: 28px;
+
+          @include sm {
+            margin-bottom: 0;
+          }
+        }
+
+        p {
+          font: normal normal 600 16px/25px Open Sans;
+          margin-left: 24px;
+
+          @include sm {
+            display: none;
+          }
         }
       }
     }
   }
-
 }

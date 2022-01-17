@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 
-export const SidebarLeft = ({data: {posts}, currentPost}) => {
+export const SidebarLeft = ({data: { posts }, currentPost, active}) => {
+
+  if (!posts) return null;
 
   let tags = [];
 
@@ -31,7 +33,7 @@ export const SidebarLeft = ({data: {posts}, currentPost}) => {
   
 
   return (
-    <aside className="sidebar sidebar--left">
+    <aside className={`sidebar sidebar--left${active ? ' active' : ''}`}>
       <div className="sidebar__content">
         {
           tags.map(({id, name, posts}) => {
@@ -54,8 +56,7 @@ export const SidebarLeft = ({data: {posts}, currentPost}) => {
               </div>
             )
           })
-        }
-        
+        }        
       </div>
     </aside>
   )

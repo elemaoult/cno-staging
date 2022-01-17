@@ -1,18 +1,73 @@
 .docsWrap{
   display: flex;
   padding-bottom: 48px;
+
+  .sidebarOpener {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    width: 26px;
+    height: 50px;
+    background: $color_buttons_link;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    transform: translateY(-50%);
+    z-index: 9;
+
+    @include sm {
+      display: flex;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 21px;
+      background: url($__IMG_PATH + 'arrow.svg') no-repeat;
+      background-size: contain;
+      transition: all .4s;
+    }
+
+    &.active {
+      &::before {
+        transform: rotateY(180deg);
+        transition-delay: .4s;
+      }
+    }
+
+    
+  }
 }
 
 
 .documentation {
-  padding: 48px 46px 0 46px;
-  width: calc(100% - 21% - 13%);
+  padding: 48px 42px 0 48px;
+  width: calc(100% - 391px - 282px);
+
+  @include desc {
+    width: calc(100% - 21% - 282px);
+    padding: 48px 24px 0 24px;
+  }
+
+  @include md {
+    width: calc(100% - 21% - 25%);
+    padding-top: 24px;
+  }
+
+  @include sm {
+    width: calc(100% - 25%);
+    padding-left: $offset_x;
+    padding-right: 12px;
+  }
+
+  @include xs {
+    width: 100%;
+    padding-right: $offset_x;
+  }
 
   h1 {
     margin-bottom: 32px;
-  }
-
-  h2 {
-    margin-top: 100px;
   }
 }

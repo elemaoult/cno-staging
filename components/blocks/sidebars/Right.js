@@ -1,7 +1,14 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import github from '../../../img/github.svg';
+import slack from '../../../img/slack-footer.svg';
+import mail from '../../../img/mail-round.svg';
+
 
 
 export const SidebarRight = ({content, title}) => {
+  
+  if (!content) return null;
 
   const [step, setStep] = useState(0);
   const anchors = [];
@@ -16,8 +23,6 @@ export const SidebarRight = ({content, title}) => {
 
   const anchorHandler = (id) => {
     const target = document.querySelectorAll(`#${id}`);
-
-    console.log(target, id);
 
     if (target.length) {
       window.scrollTo({
@@ -40,9 +45,7 @@ export const SidebarRight = ({content, title}) => {
           if (screenOffset < 250) {
             newStep = i;
           };
-        }
-
-        
+        }        
       });
 
       setStep(newStep); 
@@ -60,7 +63,7 @@ export const SidebarRight = ({content, title}) => {
       <div className="sidebar__content">
         <div className="sidebar__part">
           <div className="sidebar__title">{title}</div>
-          <ul className="sidebar__list">
+          <ul className={`sidebar__list sidebar__list--step${step}`} style={{['--step']: step}}>
             <li className={step == 0 ? 'active' : null}>
               <button className="btn anchor" onClick={() => anchorHandler('page-title')}>{title}</button>
             </li>
@@ -74,6 +77,23 @@ export const SidebarRight = ({content, title}) => {
               })
             }
           </ul>
+        </div>
+        <div className="sidebar__part">
+          <div className="sidebar__title">SUPPORT</div>
+          <div className="supportLinks">
+            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+              <Image width={30} height={30} src={github} />
+              <p>Create doc. Issue</p>
+            </a>
+            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+              <Image width={30} height={30} src={slack} />
+              <p>Join us on Slack</p>
+            </a>
+            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+              <Image width={30} height={30} src={mail} />
+              <p>Ask for demo</p>
+            </a>
+          </div>
         </div>
       </div>
     </aside>

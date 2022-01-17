@@ -1,5 +1,3 @@
-import { HeaderExt } from '../components/blocks/HeaderExt';
-import { Header } from '../components/blocks/Header';
 import { HeroHome } from '../components/blocks/HeroHome';
 import { CloudCapture } from '../components/blocks/CloudCapture';
 import { Dashboard } from '../components/blocks/Dashboard';
@@ -9,7 +7,6 @@ import { Improved } from '../components/blocks/Improved';
 import { Reduce } from '../components/blocks/Reduce';
 import { CloudTrial } from '../components/blocks/CloudTrial';
 import { StoryCards } from '../components/blocks/StoryCards';
-import { Footer } from '../components/blocks/Footer';
 import { Layout } from '../components/layout/Layout';
 
 const Home = () => {
@@ -20,9 +17,7 @@ const Home = () => {
   };
 
   return (
-    <Layout seo={metas} >
-      <HeaderExt/>
-      <Header/>
+    <Layout seo={metas} extHeader={true}>
       <HeroHome/>
       <CloudCapture/>
       <Dashboard/>
@@ -32,7 +27,6 @@ const Home = () => {
       <Reduce/>
       <CloudTrial/>
       <StoryCards/>
-      <Footer/>
     </Layout>
   )
 }

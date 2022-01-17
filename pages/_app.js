@@ -1,15 +1,10 @@
 import { useEffect } from 'react';
 
 import '../styles/globals.scss';
-import AOS from "aos";
 import NextNprogress from 'nextjs-progressbar';
 
 
 function MyApp({ Component, pageProps }) {
-
-  useEffect(() => {
-    AOS.init();
-  });
 
   return (
     <>
@@ -26,4 +21,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default MyApp;

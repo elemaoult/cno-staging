@@ -62,4 +62,21 @@
       box-shadow: 0 0 30px 0px #00000082;
     }
   }
+
+  &--link {
+    background: $color_buttons_link;
+    display: inline-block;
+    padding: 16px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .2s;
+
+    p {
+      font: normal normal 600 20px/27px Open Sans;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px 0px #000;
+    }
+  }
 }

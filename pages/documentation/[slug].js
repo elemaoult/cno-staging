@@ -1,18 +1,31 @@
+import { useState } from 'react';
 import parser from 'html-react-parser';
 import { Layout } from '../../components/layout/Layout';
-import { Header } from '../../components/blocks/Header';
-import { Footer } from '../../components/blocks/Footer';
 import { BreadCrumbs } from '../../components/blocks/BreadCrumbs';
 import { SidebarLeft } from '../../components/blocks/sidebars/Left';
 import { SidebarRight } from '../../components/blocks/sidebars/Right';
 import { DocsContent } from '../../components/blocks/DocsContent';
 import { Pagination } from '../../components/blocks/Pagination';
+import { getAllPosts } from '../../api';
 
-export const getServerSideProps = async (context) => {
+
+
+export async function getStaticPaths() {
   try {
-      const {slug} = context.query;
-      const response = await fetch('https://cno-documention.ghost.io/ghost/api/v4/content/posts/?key=72bf9fc7b0aabcceec343c7eaa&include=tags&order=published_at%20asc');
-      const data = await response.json();
+    const data = await getAllPosts();
+    const paths = data.posts.map(({slug}) => ( { params: { slug: slug.toString() } } ));
+
+    return { paths, fallback: false }
+  } catch (err) {
+      console.warn(err);
+      return { paths: [], fallback: false }
+  }
+}
+
+export const getStaticProps = async (context) => {
+  try {
+      const data = await getAllPosts();
+      const {slug} = context.params;
       const singlePostIndex = data.posts.findIndex(post => post.slug === slug);
 
       if (singlePostIndex < 0) throw 'invalid slug!'; // triger 404
@@ -39,21 +52,21 @@ const DocumentationPage = ({data, singlePost, prevPost, nextPost}) => {
     title
   ];
   const metas = { title: meta_title || title, description: meta_description || title };
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   return (
     <>
-     <Layout seo={metas}>
-       <Header/>
-       <BreadCrumbs data={breadcrumbsData}/>
-       <div className="docsWrap">
-         <SidebarLeft data={data} currentPost={id}/>
-         <div className="documentation">
+     <Layout seo={metas} extHeader={false}>
+      <BreadCrumbs data={breadcrumbsData}/>
+      <div className="docsWrap">
+        <SidebarLeft data={data} currentPost={id} active={sidebarActive}/>
+        <div className="documentation">
           <DocsContent {...docsData}/>
           <Pagination next={nextPost} prev={prevPost}/>
-         </div>         
-         <SidebarRight content={content} title={title}/>
-       </div>
-       <Footer/>
+        </div>
+        <button className={`btn sidebarOpener${sidebarActive ? ' active' : ''}`} onClick={() => setSidebarActive(!sidebarActive)}></button>   
+        <SidebarRight content={content} title={title}/>
+      </div>
      </Layout>
     </>
    )

@@ -15,12 +15,16 @@
     border-bottom: 1px solid #f1f1f1;
 
     @include md {
-      padding: 34px $offset_x;
+      padding: 34px 0;
+      padding-left: $offset_x;
+      padding-right: $offset_x;
     }
 
     @include sm {
       justify-content: space-between;
-      padding: 16px $offset_x;
+      padding: 16px 0;
+      padding-left: $offset_x;
+      padding-right: $offset_x;
       border-bottom: none;
     }
   }
@@ -112,7 +116,9 @@
           font-size: 16px;
           font-weight: 600;
           color: #323847;
-          padding: 22px $offset_x;
+          padding: 22px 0;
+          padding-left: $offset_x;
+          padding-right: $offset_x;
           display: block;
         }
       }
@@ -128,7 +134,9 @@
         a {
           color: #fff;
           display: block;
-          padding: 22px $offset_x;
+          padding: 22px 0;
+          padding-left: $offset_x;
+          padding-right: $offset_x;
           width: 100%;
   
           span {

@@ -10,7 +10,7 @@ export const Pagination = ({prev, next}) => {
       {
         prev ?
           <Link href={'/documentation/' + prev.slug}>
-            <a className="pagination__btn pagination__btn--prev">
+            <a className="btn btn--link pagination__btn pagination__btn--prev">
               <div className="pagination__title">Previous</div>
               <p>{prev.title}</p>
             </a>
@@ -21,7 +21,7 @@ export const Pagination = ({prev, next}) => {
       {
         next ?
           <Link href={'/documentation/' + next.slug}>
-            <a className="pagination__btn pagination__btn--next">
+            <a className="btn btn--link pagination__btn pagination__btn--next">
               <div className="pagination__title">Next</div>
               <p>{next.title}</p>
             </a>

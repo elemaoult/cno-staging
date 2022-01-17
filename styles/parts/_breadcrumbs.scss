@@ -5,34 +5,72 @@
   align-items: center;
   color: #fff;
 
+  @include md {
+    padding-left: $offset_x;
+    padding-right: $offset_x;
+  }
+
+  @include md {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   &__title {
     font: normal normal 700 15px/20px Roboto;
     letter-spacing: 3px;
     color: #fff;
     width: 391px;
     padding-left: 48px;
+
+    @include desc {
+      width: 21%;
+    }
+
+    @include md {
+      padding-left: 0;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__links {
     padding-right: 48px;
+
     ul {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 4px 0;
 
       li {
         font: normal normal 400 18px/24px Roboto;
         letter-spacing: 0px;
         text-decoration: underline;
 
+        @include md {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
         &:not(:last-child) {
           margin-right: 30px;
           position: relative;
           text-decoration: none;
 
+          @include sm {
+            margin-right: 12px;
+          }
+
           &::after {
             content: '/';
             display: inline-block;
             margin-left: 30px;
+
+            @include sm {
+              margin-left: 12px;
+            }
           }
         }
       }
