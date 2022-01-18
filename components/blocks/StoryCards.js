@@ -28,6 +28,7 @@ export const StoryCards = () => {
           <Image
             src={slack}
             alt=""
+            layout="responsive"
           />
         </div>
       </div>

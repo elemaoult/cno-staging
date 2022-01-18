@@ -1,12 +1,18 @@
 .sidebar {
 
-  &__content {
+  &__sticky {
     position: sticky;
     top: 150px;
 
     @include sm {
       top: 89px;
     }
+  }
+
+  &__content {
+    max-height: 85vh;
+    overflow: auto;
+    padding-bottom: 32px;
   }
 
   &__part {
@@ -36,7 +42,7 @@
       }
 
       a, button {
-        font: normal normal normal 20px/26px Roboto;
+        font: normal normal normal 16px/24px Roboto;
         color: $color_default;
         transition: all .2s;
 
@@ -63,16 +69,18 @@
   &--left {
     padding: 48px 24px 0 48px;
     border-right: 1px solid $color_grey;   
-    width: 391px;
+    // width: 391px;
+    width: 16%;
     background: #F8F9FC 0% 0% no-repeat padding-box;
 
     @include desc {
-      width: 21%;
+      width: 19%;
     }
 
     @include md {
       padding: 24px 24px 0 0;
       padding-left: $offset_x;
+      width: 21%;
     }
 
     @include sm {
@@ -103,7 +111,7 @@
       }
     }
 
-    .sidebar__content {
+    .sidebar__sticky {
 
       @include sm {
         position: static;
@@ -116,20 +124,25 @@
 
   &--right {
     padding: 48px 48px 0 0;
-    border: none;
-    //width: 15%;    
-    width: 282px;
+    border: none;   
+    // width: 282px;
+    width: 13%;
     margin-left: auto;
     background: #fff;
+
+    @include desc {
+      width: 17%;
+    }
 
     @include md {
       padding: 24px 0 0 24px;
       padding-right: $offset_x;
-      width: 25%;
+      width: 22%;
     }
 
     @include sm {
       padding-left: 12px;
+      width: 25%;
     }
 
     @include xs {
@@ -179,7 +192,7 @@
         }
 
         button {
-          font: normal normal 400 16px/22px Open Sans;
+          font: normal normal 400 14px/22px Open Sans;
           text-align: left;
           white-space: nowrap;
           overflow: hidden;
@@ -219,8 +232,8 @@
         }
 
         p {
-          font: normal normal 600 16px/25px Open Sans;
-          margin-left: 24px;
+          font: normal normal 600 12px/20px Open Sans;
+          margin-left: 12px;
 
           @include sm {
             display: none;

@@ -34,29 +34,31 @@ export const SidebarLeft = ({data: { posts }, currentPost, active}) => {
 
   return (
     <aside className={`sidebar sidebar--left${active ? ' active' : ''}`}>
-      <div className="sidebar__content">
-        {
-          tags.map(({id, name, posts}) => {
-            return (
-              <div className="sidebar__part" key={id}>
-                <div className="sidebar__title">{name}</div>
-                <ul className="sidebar__list">
-                  {
-                    posts.map(post => {
-                      return (
-                        <li key={post.id} className={currentPost == post.id ? "active" : ""}>
-                          <Link href={'/documentation/' + post.slug}>
-                            <a>{post.name}</a>
-                          </Link>
-                        </li>
-                      )
-                    })
-                  }
-                </ul>
-              </div>
-            )
-          })
-        }        
+      <div className="sidebar__sticky">
+        <div className="sidebar__content">
+          {
+            tags.map(({id, name, posts}) => {
+              return (
+                <div className="sidebar__part" key={id}>
+                  <div className="sidebar__title">{name}</div>
+                  <ul className="sidebar__list">
+                    {
+                      posts.map(post => {
+                        return (
+                          <li key={post.id} className={currentPost == post.id ? "active" : ""}>
+                            <Link href={'/documentation/' + post.slug}>
+                              <a>{post.name}</a>
+                            </Link>
+                          </li>
+                        )
+                      })
+                    }
+                  </ul>
+                </div>
+              )
+            })
+          }    
+        </div>    
       </div>
     </aside>
   )

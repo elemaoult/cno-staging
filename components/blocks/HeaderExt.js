@@ -20,6 +20,7 @@ export const HeaderExt = () => {
                 width={310}
                 height={68}
                 alt=""
+                priority={true}
               />
             </a>
           </div>
@@ -30,6 +31,7 @@ export const HeaderExt = () => {
                 width={187}
                 height={75}
                 alt=""
+                priority={true}
               />
             </a>
           </div>

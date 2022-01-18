@@ -9,6 +9,8 @@
         color: $color_primary;
         max-width: 650px;
         margin-bottom: 20px;
+        min-height: 120px;
+        
         span {
             color: $color_secondary;
         }
@@ -35,8 +37,7 @@
         position: absolute;
         top: 0;
         right: 0;
-    }
-    
+    }    
 }
 @media (max-width: 1650px) {
     .hero_section {
@@ -104,6 +105,7 @@
                 text-align: center;
                 font: normal normal bold 35px/normal "Open Sans";
                 margin-bottom: 10px;
+                min-height: 94px;
             }
             p {
                 text-align: center;

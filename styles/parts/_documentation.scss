@@ -1,6 +1,6 @@
 .docsWrap{
   display: flex;
-  padding-bottom: 48px;
+  padding-bottom: 16px;
 
   .sidebarOpener {
     display: none;
@@ -43,16 +43,16 @@
 
 
 .documentation {
-  padding: 48px 42px 0 48px;
-  width: calc(100% - 391px - 282px);
+  padding: 48px 42px 32px 48px;
+  width: calc(100% - 16% - 13%);
 
   @include desc {
-    width: calc(100% - 21% - 282px);
+    width: calc(100% - 19% - 17%);
     padding: 48px 24px 0 24px;
   }
 
   @include md {
-    width: calc(100% - 21% - 25%);
+    width: calc(100% - 21% - 22%);
     padding-top: 24px;
   }
 

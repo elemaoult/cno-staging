@@ -1,0 +1,128 @@
+.about {
+  background: $color_about_bg;
+  color: #fff;
+  padding: 135px 0 92px 0;
+
+  @include sm {
+    padding: 59px 0 0 0;
+  }
+
+  .container {
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    font: normal normal 900 40px/60px Montserrat;
+  }
+
+  &__intro {
+    @include sm {
+      padding-left: $offset_x;
+      padding-right: $offset_x;
+    }
+  }
+
+  .members {
+    margin-top: 92px;
+
+    @include sm {
+      padding-left: $offset_x;
+      padding-right: $offset_x;
+    }
+  }
+
+  .storys {
+    margin-top: 108px;
+    margin-bottom: 0;
+
+    @include sm {
+      margin-top: 161px;
+    }
+
+    .red_block {
+      background: transparent;
+      left: 0;
+    }
+
+    .overlay {
+      background: linear-gradient(271deg, #199E58 0%, #517BBD 100%) 0% 0% no-repeat padding-box;
+    }
+  }
+}
+
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 54px 25px;
+
+  @include sm {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  @include xxs {
+    display: flex;
+    overflow: auto;
+    padding-bottom: 4px;
+  }
+}
+
+.member {
+
+  @include xxs {
+    min-width: 306px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  &__photo {
+    position: relative;
+    width: 100%;
+    height: 225px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+  
+
+  &__caption {
+    background: #fff;
+    color: #000;
+    padding: 32px 24px;
+  }
+
+  &__name {
+    font: normal normal 600 20px/35px Open Sans;
+    color: $color_primary;
+  }
+
+  &__pos {
+    font: normal normal medium 16px/35px Open Sans;
+    margin-top: 3px;
+  }
+
+  &__links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+}

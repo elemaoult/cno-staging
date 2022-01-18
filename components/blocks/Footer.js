@@ -3,6 +3,7 @@ import cno from '../../img/cno-footer.svg';
 import linkedin from '../../img/linkedin-footer.svg';
 import slack from '../../img/slack-footer.svg';
 import beopeni from '../../img/beopeni-footer.svg';
+import Link from "next/link";
 
 export const Footer = () => {
 
@@ -53,7 +54,11 @@ export const Footer = () => {
               <div className="footer__title">Community</div>
               <ul> 
                 <li> <a href="#">Slack channel</a></li>
-                <li className="about"><a href="#">About us</a></li>
+                <li>
+                  <Link href="/about">
+                    <a>About us</a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

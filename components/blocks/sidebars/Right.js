@@ -63,39 +63,41 @@ export const SidebarRight = ({content, title}) => {
 
   return (
     <aside className="sidebar sidebar--right">
-      <div className="sidebar__content">
-        <div className="sidebar__part">
-          <div className="sidebar__title">{title}</div>
-          <ul className={`sidebar__list sidebar__list--step${step}`} style={{['--step']: step}}>
-            <li className={step == 0 ? 'active' : null}>
-              <button className="btn anchor" onClick={() => anchorHandler('page-title')}>{title}</button>
-            </li>
-            {
-              anchors.map((anchor, i) => {
-                return (
-                  <li key={anchor.props.id} className={step == i + 1 ? 'active' : null}>
-                    <button className="btn anchor" onClick={() => anchorHandler(anchor.props.id)}>{anchor.props.children}</button>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-        <div className="sidebar__part">
-          <div className="sidebar__title">SUPPORT</div>
-          <div className="supportLinks">
-            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={github} alt="" />
-              <p>Create doc. Issue</p>
-            </a>
-            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={slack} alt="" />
-              <p>Join us on Slack</p>
-            </a>
-            <a href="#" className="btn btn--link supportLinks__link" target="_blank">
-              <Image width={30} height={30} src={mail} alt="" />
-              <p>Ask for demo</p>
-            </a>
+      <div className="sidebar__sticky">
+        <div className="sidebar__content">
+          <div className="sidebar__part">
+            <div className="sidebar__title">{title}</div>
+            <ul className={`sidebar__list sidebar__list--step${step}`} style={{['--step']: step}}>
+              <li className={step == 0 ? 'active' : null}>
+                <button className="btn anchor" onClick={() => anchorHandler('page-title')}>{title}</button>
+              </li>
+              {
+                anchors.map((anchor, i) => {
+                  return (
+                    <li key={anchor.props.id} className={step == i + 1 ? 'active' : null}>
+                      <button className="btn anchor" onClick={() => anchorHandler(anchor.props.id)}>{anchor.props.children}</button>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+          </div>
+          <div className="sidebar__part">
+            <div className="sidebar__title">SUPPORT</div>
+            <div className="supportLinks">
+              <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+                <Image width={30} height={30} src={github} alt="" />
+                <p>Create doc. Issue</p>
+              </a>
+              <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+                <Image width={30} height={30} src={slack} alt="" />
+                <p>Join us on Slack</p>
+              </a>
+              <a href="#" className="btn btn--link supportLinks__link" target="_blank">
+                <Image width={30} height={30} src={mail} alt="" />
+                <p>Ask for demo</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>

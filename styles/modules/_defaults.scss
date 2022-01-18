@@ -17,12 +17,6 @@ img {
   max-width: 100%;
 }
 
-.root {
-  display: flex;
-  flex-direction: column;
-  min-height: 300vh;
-}
-
 .container {
   width: $container-xl;
   margin: 0 auto;
@@ -30,4 +24,9 @@ img {
   @include cont {
     width: $container;
   }
+}
+
+.ol {
+  list-style: auto;
+  padding-left: 40px;
 }
