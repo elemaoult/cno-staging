@@ -1,5 +1,5 @@
 import { AboutContent } from '../components/blocks/AboutContent';
-import { CloudGreen } from '../components/blocks/CloudGreen';
+import { CloudGreen } from '../components/clouds/CloudGreen';
 import { Layout } from '../components/layout/Layout';
 
 const About = () => {

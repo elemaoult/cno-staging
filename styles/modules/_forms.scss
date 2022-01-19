@@ -1,3 +1,28 @@
 .form {
   background: #fff;
+  padding: 56px;
+  margin-bottom: 48px;
+  position: relative;
+
+  @include xs {
+    padding: 56px 32px 32px 32px;
+    margin-top: 290px;
+  }
+
+  &::before {
+    content: '';
+    width: 120px;
+    height: 210px;
+    position: absolute;
+    top: -136px;
+    right: 0;
+    background-image: url($__IMG_PATH + 'contacts-man.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+
+    @include xs {
+      display: block;
+    }
+  }
 }

@@ -46,8 +46,16 @@ export const Footer = () => {
               <div className="footer__title">Platform</div>
               <ul> 
                 <li> <a href="#">Get started</a></li>
-                <li className="demo"><a href="#">Demonstration</a></li>
-                <li className="doc"><a href="#">Documentation</a></li>
+                <li>
+                  <Link href="/demonstration">
+                    <a>Demonstration</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/documentation">
+                    <a>Documentation</a>
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="footer__list"> 

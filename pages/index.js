@@ -1,11 +1,11 @@
 import { HeroHome } from '../components/blocks/HeroHome';
-import { CloudCapture } from '../components/blocks/CloudCapture';
+import { CloudCapture } from '../components/clouds/CloudCapture';
 import { Dashboard } from '../components/blocks/Dashboard';
 import { Enduring } from '../components/blocks/Enduring';
 import { Technologies } from '../components/blocks/Technologies';
 import { Improved } from '../components/blocks/Improved';
 import { Reduce } from '../components/blocks/Reduce';
-import { CloudTrial } from '../components/blocks/CloudTrial';
+import { CloudTrial } from '../components/clouds/CloudTrial';
 import { StoryCards } from '../components/blocks/StoryCards';
 import { Layout } from '../components/layout/Layout';
 

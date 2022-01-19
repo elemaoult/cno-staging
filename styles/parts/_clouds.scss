@@ -1,0 +1,165 @@
+.cloud {
+  background: url($__IMG_PATH + 'ombrage.svg') no-repeat #517bbd;
+  background-size: cover;
+  padding: 360px 0;
+  position: relative;
+
+  @include md {
+    padding: 200px 0;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    background-position: top center;
+    background-size: cover;
+
+    @include md {
+      height: 200px;
+    }
+  }
+
+  &::before {    
+    top: 0;
+    background-image: url($__IMG_PATH + 'cloud-01.svg');
+  }
+
+  &::after {
+    bottom: 0;
+    background-image: url($__IMG_PATH + 'cloud-02.svg');
+  }
+
+  
+
+  .cloud_content {
+    text-align: center;
+    padding: 112px 0;
+    color: #fff;
+
+    @include sm {
+      padding: 40px 0;
+    }
+
+    .microphone {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 30px;
+
+      @include xs {
+        width: 100px;
+      }
+    }
+    
+    h2 {
+      font: normal normal bold 40px/60px "Open Sans";
+      margin-bottom: 42px;
+
+      @include xs {
+        font: normal normal bold 32px/45px "Open Sans";
+      }
+    }
+
+    p {
+      font: normal normal 500 20px/45px Open Sans;
+      margin-bottom: 56px;
+
+      @include xs {
+        font: normal normal normal 18px/35px Open Sans;
+      }
+    }
+
+    a:not(.btn) {
+      display: block;
+      color: white;
+      text-decoration: underline;
+      margin-top: 40px;
+    }
+  }
+
+  &--top {
+    padding-bottom: 18px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &--green {
+    background: linear-gradient(271deg, #199E58 0%, #517BBD 100%) 0% 0% no-repeat padding-box;
+
+    .cloud_content {
+      max-width: 1010px;
+      margin: 0 auto;
+
+      h2 {
+        font: normal normal 900 40px/60px Montserrat;
+
+        @include xs {
+          font: normal normal 900 25px/60px Montserrat;
+        }
+      }      
+
+      p {
+        font: normal normal normal 22px/40px Open Sans;
+
+        @include xs {
+          font: normal normal normal 18px/40px Open Sans;
+        }
+      }
+    }
+  }
+
+  &--demo {
+
+    @include xs {
+      padding-top: 45px;
+    }
+
+    &::before {
+
+      @include xs {
+        display: none;
+      }
+    }
+
+    &::after {
+      background-image: url($__IMG_PATH + 'cloud-03-black.svg');
+    }
+
+    .cloud_content {
+
+      h2 {
+        font: normal normal bold 40px/49px Montserrat;
+
+        @include xs {
+          font: normal normal bold 25px/38px Montserrat;
+        }
+      }
+
+      p {
+        font: normal normal normal 24px/45px Open Sans;
+
+        @include xs {
+          font: normal normal normal 18px/35px Open Sans;
+        }
+      }
+
+      .demonstration__subs {
+
+        p {
+          font: normal normal normal 20px/30px Roboto;
+          margin-bottom: 48px;
+
+          @include xs {
+            font: normal normal normal 14px/30px Roboto;
+          }
+        }
+      }
+    }
+  }
+
+}

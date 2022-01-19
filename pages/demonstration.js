@@ -1,6 +1,6 @@
 import { Layout } from '../components/layout/Layout';
 import HubspotForm from 'react-hubspot-form';
-import { CloudDemo } from '../components/blocks/CloudDemo';
+import { CloudDemo } from '../components/clouds/CloudDemo';
 
 const Demonstration = () => {
 
@@ -20,6 +20,11 @@ const Demonstration = () => {
             onReady={(form) => console.log('Form ready!')}
             loading={<div>Loading...</div>}
           />
+        </div>
+        <div className="demonstration__subs">
+          <p>Your data is protected. See our privacy policy and our commitment here.</p>
+          <p>The collection of the requested information is necessary for CNO to process your request. It will allow you to be contacted in connection with your request. The information collected may be used for prospecting purposes.</p>
+          <p>You have the right to access, rectify, oppose and delete data concerning you. To exercise these rights, please consult our page management of my personal data.</p>
         </div>
       </CloudDemo>
     </Layout>
