@@ -25,7 +25,7 @@ export const AboutContent = () => {
             {
               Array.from({length: 16}).map((el, i) => {
                 return (
-                  <div className="member">
+                  <div className="member" key={i}>
                     <div className="member__photo">
                       <Image layout="fill" src={member} alt="" />
                     </div>
