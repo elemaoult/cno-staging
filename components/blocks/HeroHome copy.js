@@ -8,26 +8,29 @@ export const HeroHome = () => {
   const headingRef = useRef(null);
 
   useEffect(() => {
+
     try {
       const typeitData = headingRef.current.dataset.content;
-      const typeitSplitted = typeitData.split(" | ");
-      const typePart1 = typeitSplitted[0] || '';
-      const typePart2 = typeitSplitted[1] || '';
+      const [typePart1, typePart2, ...typeOthers] = typeitData.split(" | ");
+      const typeitResult = `
+        ${typePart1 || 'Hello world!'} 
+        ${typePart2 ? `<br/><span>${typePart2}</span>` : ''} 
+        ${typeOthers || ''}
+      `;
 
-      const typeitInst = new TypeIt(headingRef.current, { speed: 140, loop: true })
-        .type(typePart1, {delay: 300})
-        .pause(500)
-        .delete(14)
-        .pause(500)
-        .type(typePart2, {delay: 100})
-        .pause(500)
+      const typeitInst = new TypeIt(headingRef.current, { speed: 80, loop: true })
+        .type(typeitResult, {delay: 100})
         .go()
 
 
       return () => typeitInst.destroy();
+
     } catch (err) {
-      console.warn('error in typeit in home hero --- ', err);
+      console.warn('error in typeit in home hero', err);
     }
+
+
+
   });
 
   return (
@@ -35,10 +38,7 @@ export const HeroHome = () => {
       <div className="container"> 
         <div className="hero_content" data-aos="fade-right"> 
           <div className="content_hero">
-            <h2 id="typeit_hero">
-              Reduce your time to <br />
-              <span ref={headingRef} data-content="tedious tasks. | production."></span>
-            </h2>
+            <h2 id="typeit_hero" ref={headingRef} data-content="Reduce your time to | tedious tasks."></h2>
             <p>No code, no compromise, no waste… only Kubernetes benefits.</p>
           </div>
           <div className="content_buttons"> 

@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <Layout seo={metas} extHeader={true}>
+    <Layout seo={metas} extHeader={true} askDemo={true} askQuestion={true}>
       <HeroHome/>
       <CloudCapture/>
       <Dashboard/>

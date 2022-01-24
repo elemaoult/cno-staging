@@ -21,8 +21,6 @@ export const SidebarRight = ({content, title}) => {
   const anchorHandler = (id) => {
     const target = document.getElementById(`${id}`);
 
-    console.log(target);
-
     if (target) {
       window.scrollTo({
           top: (target.getBoundingClientRect().top - (target.clientHeight / 2)) + scrollY - 200,

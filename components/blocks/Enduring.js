@@ -1,5 +1,5 @@
 import Image from "next/image";
-import screens from '../../img/screens.svg';
+import screens from '../../img/Home-Page-Scree-02.svg';
 
 export const Enduring = () => {
 

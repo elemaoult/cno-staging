@@ -26,3 +26,27 @@
     }
   }
 }
+
+.formSubmit {
+  
+
+  &__title {
+    font: normal normal normal 35px/60px Open Sans;
+
+    @include xs {
+      font: normal normal normal 20px/35px Open Sans;
+    }
+  }
+
+  &__subtitle {
+    font: normal normal 600 35px/60px Open Sans;
+
+    @include xs {
+      font: normal normal 600 20px/35px Open Sans;
+    }
+  }
+
+  .links {
+    margin-top: 88px;
+  }
+}
