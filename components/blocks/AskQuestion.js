@@ -5,8 +5,6 @@ import chat from '../../img/chat.svg';
 export const AskQuestion = () => {
 
   return (
-    <button className="btn askQuestion">
-      <Image src={chat} layout="fixed" alt="" width={47} height={47} />
-    </button>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/8613364.js"></script>
   )
 }
