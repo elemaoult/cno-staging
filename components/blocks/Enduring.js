@@ -13,8 +13,8 @@ export const Enduring = () => {
           />
         </div>
         <div className="right_block">
-          <h3>Stop enduring the lock-in effects</h3>
-          <p>  Seamless and secure availability is the key to your productivity ! From CNOhub, Help your teams fill the multi-cloud gap by centralizing the management of cloud-based and/or on-premises clusters on a single console.</p>
+          <h3>Unify your multi-cloud ecosystem on a single console</h3>
+          <p> Stop enduring the scattering of multi-cloud. CNOHub Seamless and secure availability of your clusters - cloud based and/or on premises - by centralizing their governance on a single console</p>
           <a href="#">CNOhub concept</a>
         </div>
       </div>
