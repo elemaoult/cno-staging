@@ -1,49 +1,42 @@
 .cloud {
-  background: url($__IMG_PATH + 'ombrage.svg') no-repeat #517bbd;
-  background-size: cover;
-  padding: 360px 0;
+  // background: url($__IMG_PATH + 'ombrage.svg') no-repeat #517bbd;
+  // padding: 360px 0;
   position: relative;
 
   @include md {
-    padding: 200px 0;
+    // padding: 200px 0;
   }
 
-  &::before, &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 360px;
-    background-size: cover;
-    background-repeat: no-repeat;
+  // &::before,
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 360px;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
 
-    @include md {
-      height: 200px;
-    }
-  }
+  //   @include md {
+  //     height: 200px;
+  //   }
+  // }
 
-  &::before {    
-    top: 0;
-    background-image: url($__IMG_PATH + 'cloud-01.svg');
-    background-position: top center;
-  }
+  // &::before {
+  //   top: 0;
+  //   background-image: url($__IMG_PATH + 'cloud-01.svg');
+  //   background-position: top center;
+  // }
 
-  &::after {
-    bottom: 0;
-    background-image: url($__IMG_PATH + 'cloud-02.svg');
-    background-position: bottom center;
-  }
-
-  
+  // &::after {
+  //   bottom: 0;
+  //   background-image: url($__IMG_PATH + "cloud-02.svg");
+  //   background-position: bottom center;
+  // }
 
   .cloud_content {
     text-align: center;
-    padding: 112px 0;
     color: #fff;
-
-    @include sm {
-      padding: 40px 0;
-    }
 
     .microphone {
       width: 200px;
@@ -55,7 +48,7 @@
         width: 100px;
       }
     }
-    
+
     h2 {
       font: normal normal bold 40px/60px "Open Sans";
       margin-bottom: 42px;
@@ -74,10 +67,38 @@
       }
     }
 
+    h3 {
+      margin-bottom: 56px;
+    }
+
+    .info__cloud {
+      width: 75%;
+      height: 5rem;
+      background-color: #30496f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3rem;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 60px;
+      padding-right: 60px;
+      @include xs {
+        width: 95%;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 15vh;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+
     a:not(.btn) {
       display: block;
       color: white;
-      text-decoration: underline;
+      text-decoration: none;
       margin-top: 40px;
     }
   }
@@ -91,7 +112,8 @@
   }
 
   &--green {
-    background: linear-gradient(271deg, #199E58 0%, #517BBD 100%) 0% 0% no-repeat padding-box;
+    background: linear-gradient(271deg, #199e58 0%, #517bbd 100%) 0% 0%
+      no-repeat padding-box;
 
     .cloud_content {
       max-width: 1010px;
@@ -103,7 +125,7 @@
         @include xs {
           font: normal normal 900 25px/60px Montserrat;
         }
-      }      
+      }
 
       p {
         font: normal normal normal 22px/40px Open Sans;
@@ -116,24 +138,17 @@
   }
 
   &--demo {
-
-    @include xs {
-      padding-top: 45px;
-    }
+    // @include xs {
+    //   padding-top: 45px;
+    // }
 
     &::before {
-
       @include xs {
         display: none;
       }
     }
 
-    &::after {
-      background-image: url($__IMG_PATH + 'cloud-03-black.svg');
-    }
-
     .cloud_content {
-
       h2 {
         font: normal normal bold 40px/49px Montserrat;
 
@@ -142,26 +157,197 @@
         }
       }
 
-      p {
-        font: normal normal normal 24px/45px Open Sans;
-
+      .beta-tester {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding-bottom: 10vh;
         @include xs {
-          font: normal normal normal 18px/35px Open Sans;
+          padding-top: 5vh;
+        }
+
+        .details {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          padding-left: 2rem;
+          padding-top: 4vh;
+          @include xs {
+            padding: 2vmax;
+          }
+          & > span {
+            &:nth-child(1) {
+              margin-bottom: 2rem;
+              color: #517bbd;
+              font: normal normal bold 40px/49px Montserrat;
+              @include xs {
+                font: normal normal bold 25px/38px Montserrat;
+              }
+              & > span {
+                color: #199e58;
+              }
+            }
+
+            &:nth-child(2) {
+              color: #707070;
+              font: normal normal normal 24px/45px Open Sans;
+              text-align: left;
+              @include xs {
+                font: normal normal normal 18px/35px Open Sans;
+                text-align: justify;
+              }
+            }
+          }
+        }
+        .collapsion {
+          margin-top: 6vh;
+          width: 100%;
         }
       }
 
-      .demonstration__subs {
+      .demo__section {
+        width: 100%;
+        background: url($__IMG_PATH + "ombrage.svg") no-repeat #517bbd;
+        padding-bottom: 45vh;
+        padding-top: 40vh;
+        padding-left: 15vw;
+        padding-right: 15vw;
+        position: relative;
+        overflow: hidden;
+        @include xs {
+          padding-top: 20vh;
+          padding-left: 2vw;
+          padding-right: 2vw;
+          padding-bottom: 30vh;
+        }
 
-        p {
-          font: normal normal normal 20px/30px Roboto;
-          margin-bottom: 48px;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -5%;
+          left: 0;
+          background-image: url($__IMG_PATH + 'cloud-01.svg');
+          background-position: top center;
+          width: 100%;
+          height: 360px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
 
-          @include xs {
-            font: normal normal normal 14px/30px Roboto;
+        &::after {
+          background-image: url($__IMG_PATH + "cloud-03-black.svg");
+          content: "";
+          position: absolute;
+          bottom: -3%;
+          right: 0;
+          width: 100%;
+          height: 360px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .demostration__tags_num {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 2rem;
+          .circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            span {
+              color: #517bbd;
+              font: normal normal bold 35px/50px Montserrat;
+            }
+          }
+
+          .content {
+            text-align: center;
+            margin-bottom: 2rem;
+            span {
+              font: normal normal bold 40px/55px Montserrat;
+            }
+          }
+
+          p {
+            font: normal normal normal 24px/45px Open Sans;
+
+            @include xs {
+              font: normal normal normal 18px/35px Open Sans;
+            }
+          }
+
+          .demonstration__subs {
+            p {
+              font: normal normal normal 20px/30px Roboto;
+              margin-bottom: 48px;
+
+              @include xs {
+                font: normal normal normal 14px/30px Roboto;
+              }
+            }
+          }
+
+          .form {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            @include xs {
+              margin-top: 5rem;
+            }
           }
         }
       }
     }
   }
 
+  &.bg__wrap {
+    margin-top: 12vh;
+    position: relative;
+    overflow: hidden;
+    background: url($__IMG_PATH + 'ombrage.svg') no-repeat #517bbd;
+    background-size: cover;
+    padding-bottom: 50vh;
+    padding-top: 50vh;
+    @include md {
+      padding-top: 20vh;
+      padding-bottom: 25vh;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 360px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  
+      @include md {
+        height: 200px;
+      }
+    }
+  
+    &::before {
+      top: -5%;
+      background-image: url($__IMG_PATH + 'cloud-01.svg');
+      background-position: top center;
+    }
+  
+    &::after {
+      bottom: -5%;
+      background-image: url($__IMG_PATH + "cloud-02.svg");
+      background-position: bottom center;
+    }
+  
+  }
 }
+
+
