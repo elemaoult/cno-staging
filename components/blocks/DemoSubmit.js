@@ -19,7 +19,7 @@ export const DemoSubmit = () => {
   const formRef = useRef(null);
   const links = [
     {href: '/', img: link_home, label: 'Back to square one Home page'},
-    {href: '/documentation', img: link_docs, label: 'Discover our documentation'},
+    // {href: '/documentation', img: link_docs, label: 'Discover our documentation'},
     {href: '#', img: link_linkedin, label: 'Let’s keep in touch, join us on Linkedin.'}
   ]
 

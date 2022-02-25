@@ -7,6 +7,9 @@ import { SidebarRight } from '../../components/blocks/sidebars/Right';
 import { DocsContent } from '../../components/blocks/DocsContent';
 import { Pagination } from '../../components/blocks/Pagination';
 import { getAllPosts } from '../../api';
+import mockup from '../../img/mockup.png';
+import Image from "next/image";
+
 
 export const getServerSideProps = async (context) => {
   try {
@@ -49,6 +52,33 @@ const Documentation = ({data, prevPost, nextPost}) => {
         <SidebarRight content={content} title={title}/>
       </div>
     </Layout>
+   <div className="backdrop-static">
+      <div>
+        <div className="pop__view">
+            <div className="title">
+                <span>The product is not yet public, It will be thanks … to you 🤫</span>
+            </div>
+            <div className="content">
+                <span>This pilot launch is an opportunity to gather feedback from our first users… You can be part of it as Beta tester ! For this no need for documentation as we our Kubernetes experts will walk you through your experience.</span>
+            </div>
+            <button>
+              <span>BECOME BETA TESTER FOR 6 MONTH FREE</span>
+            </button>
+            <div className="info">
+                <span>*Limited time offer, : 28/02/2022 and the 01/04/2022.</span>
+            </div>
+        </div>
+        <div className="pop__image">
+        <Image
+          src={mockup}
+          layout="responsive"
+          placeholder="blur"
+          priority={true}
+          alt=""
+        />
+        </div>
+      </div>
+   </div>
    </>
   )
 }

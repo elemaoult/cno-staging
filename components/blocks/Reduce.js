@@ -13,8 +13,8 @@ export const Reduce = () => {
           />
         </div>
         <div className="right_block">
-          <h3>Reduce your time to market by 5</h3>
-          <p> All that’s left is for your teams to sustain your momentum and achieve business objectives. In a few clicks, they will have access to the deployment strategies best suited to your use cases as continuous delivery, continuous deployment, or even Blue/Green.</p>
+          <h3>Just make benefits !</h3>
+          <p> All that’s left is for you and  your teams, is to achieve business objectives. In a few clicks with CNO  deploy , you can choose  the  deployment model bests suited to your use cases for each application: Continuous Delivery, Continuous Deployment or Blue/Green.</p>
           <a href="#">CNO Deploy concept</a>
         </div>
       </div>

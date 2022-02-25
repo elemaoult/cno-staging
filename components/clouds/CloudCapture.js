@@ -4,7 +4,7 @@
 export const CloudCapture = () => {
 
   return (
-    <section className="cloud">
+    <section className="cloud bg__wrap">
       <div className="container">
         <div className="cloud_content" data-aos="fade-top">
           <h2>Welcome, how I can help you ?</h2>
